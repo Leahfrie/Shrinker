@@ -1,0 +1,9 @@
+node_modules/
+vendor/
+.vscode/
+.idea/
+.cache/
+*.log
+*.tmp
+htdocs/
+
