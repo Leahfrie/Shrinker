@@ -1,7 +1,8 @@
 <?php
 include '../includes/db.php';
+include '../includes/auth.php';
 
-$user_id = 1; // TEMP — replace with login system later
+$user_id = $_SESSION['user_id'];
 
 $sql = "SELECT * FROM users WHERE id = $user_id";
 $user = $conn->query($sql)->fetch_assoc();
