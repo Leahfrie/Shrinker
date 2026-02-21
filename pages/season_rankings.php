@@ -1,6 +1,7 @@
 <?php
 include '../includes/db.php';
 include '../includes/auth.php';
+include '../includes/nav.php';
 
 // Get all users
 $users = $conn->query("SELECT id, name, starting_weight, points FROM users");

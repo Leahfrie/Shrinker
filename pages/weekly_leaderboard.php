@@ -1,6 +1,7 @@
 <?php
 include '../includes/db.php';
 include '../includes/auth.php';
+include '../includes/nav.php';
 
 $current_week = date('Y-m-d', strtotime('monday this week'));
 $previous_week = date('Y-m-d', strtotime('monday last week'));

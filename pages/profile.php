@@ -1,6 +1,7 @@
 <?php
 include '../includes/db.php';
 include '../includes/auth.php';
+include '../includes/nav.php';
 
 $user_id = $_SESSION['user_id'];
 
