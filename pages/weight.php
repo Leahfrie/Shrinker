@@ -29,17 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Fetch weight history
-$data = $conn->query("SELECT week_start, weight, photo 
-                      FROM weekly_weights 
-                      WHERE user_id=$user_id 
-                      ORDER BY week_start ASC");
+$data = $conn->query("SELECT weight, photo, date_logged
+                      FROM weekly_weights
+                      WHERE user_id=$user_id
+                      ORDER BY date_logged ASC");
+
 
 $dates = [];
 $weights = [];
 $photos = [];
 
 while ($row = $data->fetch_assoc()) {
-    $dates[] = $row['week_start'];
+    $dates[] = date('Y-m-d', strtotime($row['date_logged']));
     $weights[] = $row['weight'];
     $photos[] = $row['photo'];
 }
